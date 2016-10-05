@@ -1,0 +1,88 @@
+%                                                                 aa.dem
+% AA vers. 9.1, LaTeX class for Astronomy & Astrophysics
+% demonstration file
+%                                                       (c) EDP Sciences
+%-----------------------------------------------------------------------
+%
+%\documentclass[referee]{aa} % for a referee version
+%\documentclass[onecolumn]{aa} % for a paper on 1 column  
+%\documentclass[longauth]{aa} % for the long lists of affiliations 
+%\documentclass[letter]{aa} % for the letters 
+%\documentclass[bibyear]{aa} % if the references are not structured 
+%                              according to the author-year natbib style
+
+
+\documentclass{aa}
+
+%### Packages
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{booktabs}
+%\usepackage[options]{hyperref}
+% To add links in your PDF file, use the package "hyperref"
+% with options according to your LaTeX or PDFLaTeX drivers.
+%
+\begin{document} 
+
+%### Title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\title{Title}
+\subtitle{}
+
+\author{D. Lenz \inst{1,2,3,\thanks{\email{daniel.lenz@jpl.nasa.gov}}}, L. Fl\"oer\inst{1}, J. Kerp \inst{1}}
+
+\institute{
+Argelander-Institut f\"ur Astronomie, Universit\"at Bonn, Auf dem H\"ugel 71, 53121 Bonn, Germany
+	\and
+Jet Propulsion Laboratory, California Institute of Technology, Pasadena, California 91109, USA
+	\and
+California Institute of Technology, Pasadena, California, 91125 USA
+}
+
+\authorrunning{Lenz et al.}
+%\date{Received July 17, 2014; accepted October 10, 2014}
+\date{To be submitted to A\&A}
+
+
+%### Abstract
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \abstract{}{}{}{}{}
+% 5 {} token are mandatory
+\input{abstract}
+
+\keywords{ISM: clouds, dust -- Methods: data analysis}
+
+\maketitle
+
+%### Individual chapters
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\listoftodos
+
+\input{introduction}
+\input{data}
+\input{results}
+\input{discussion}
+\input{conclusion}
+
+%### Acknowledgements
+%###################################################
+
+\begin{acknowledgements}
+We thank the Deutsche Forschungsgemeinschaft (DFG) for the project funding under grants KE757/7-1 to -3. Based on observations with the 100\,m telescope of the MPIfR (Max-Planck-Institut f\"{u}r Radioastronomie) at Effelsberg. D.L. is a member of the Bonn-Cologne Graduate School of Physics and Astronomy (BCGS). L.F. is a member of the International Max Planck Research School (IMPRS) for Astronomy and Astrophysics at the Universities of Bonn and Cologne. 
+\end{acknowledgements}
+
+%### Bibliography
+%###################################################
+
+\bibliographystyle{aa}
+\bibliography{references.bib}	
+
+\begin{appendix}
+\input{appendix}
+\end{appendix}
+
+
+\end{document}
